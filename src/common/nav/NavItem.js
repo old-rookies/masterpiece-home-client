@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter as NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class NavItem extends React.Component {
-    render() {
+    render() {        
         return (
-                <li
-                    className={
-                        this.props.active ? "nav-item active" : "nav-item"
-                    }
-                >
-                    <NavLink className="nav-link" to={this.props.url}>{this.props.text}</NavLink>
-                </li>
+            <li className="nav-item">
+                <NavLink className="nav-link " to={this.props.url} activeClassName="active">
+                    {this.props.text}
+                </NavLink>
+            </li>
         );
     }
 }

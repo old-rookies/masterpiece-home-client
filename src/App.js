@@ -1,10 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Nav from "./common/nav/Nav";
 
@@ -20,10 +16,11 @@ function App() {
                 <Nav />
             </div>
             <Route exact path="/" component={Service} />
-            <Route exact path="/service" component={Service} />
+            <Route path="/service" component={Service} />
             <Route path="/team" component={Team} />
             <Route path="/press" component={Press} />
             <Route path="/contact" component={Contact} />
+            {/* NOT FOUND */}
         </Router>
     );
 }

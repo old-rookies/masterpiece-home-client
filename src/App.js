@@ -2,6 +2,8 @@ import React from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import './App.css';
+
 import Nav from "./common/nav/Nav";
 
 import Service from './Service/Service';
@@ -12,9 +14,7 @@ import Contact from './Contact/Contact';
 function App() {
     return (
         <Router>
-            <div className="App">
-                <Nav />
-            </div>
+            <Nav />
             <Route exact path="/" component={Service} />
             <Route path="/service" component={Service} />
             <Route path="/team" component={Team} />

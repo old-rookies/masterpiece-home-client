@@ -2,9 +2,11 @@ import React from 'react';
 
 class Service extends React.Component{
     render(){
-        return <p>
-            Service
-        </p>
+        return <div className='service'>
+            <div className="container jumbo">
+                Hello
+            </div>
+        </div>;
     }
 }
 

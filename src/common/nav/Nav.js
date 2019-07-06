@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 
-
+import "./Nav.scss";
 
 // 공통 사용될 Nav 함수
 class Nav extends React.Component {
@@ -15,9 +15,9 @@ class Nav extends React.Component {
         ];
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <NavLink className="navbar-brand" exact to="/">
-                    Navbar
+                    Masterpiece
                 </NavLink>
                 <button
                     className="navbar-toggler"

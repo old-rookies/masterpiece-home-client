@@ -6,10 +6,10 @@ import './App.css';
 
 import Nav from "./common/nav/Nav";
 
-import Service from './Service/Service';
-import Team from './Team/Team';
-import Press from './Press/Press';
-import Contact from './Contact/Contact';
+import Service from './Service/Service.js';
+import Team from './Team/Team.js';
+import Press from './Press/Press.js';
+import Contact from './Contact/Contact.js';
 
 function App() {
     return (

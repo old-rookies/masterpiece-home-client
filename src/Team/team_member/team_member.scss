@@ -1,0 +1,29 @@
+.bg_mem {
+    background-color: #E2F0D9;
+}
+
+.member_info_box {
+    width: 500px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+.member_info_box ul {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+}
+
+.member_profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: #4472C4;
+}
+
+.member_name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 10px;
+}

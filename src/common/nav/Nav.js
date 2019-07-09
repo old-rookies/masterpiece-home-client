@@ -2,8 +2,24 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 
+import './Nav.scss';
+
 // 공통 사용될 Nav 함수
 class Nav extends React.Component {
+    state = {
+        isOnTop : true
+    };
+    
+    componentDidMount(){
+        // component 로드 후 실행됨
+        document.addEventListener('scroll', () => {
+            const isOnTop = window.scrollY < 56;
+            if (isOnTop !== this.state.isOnTop) {
+                this.setState({ isOnTop });
+            }
+        });
+    }
+
     render() {
         let navItems = [
             { url: "service", text: "Service", active: true },
@@ -13,9 +29,9 @@ class Nav extends React.Component {
         ];
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+            <nav className={ "navbar navbar-expand-lg fixed-top " + (this.state.isOnTop ? "navbar-light" : " navbar-dark bg-dark") }>
                 <NavLink className="navbar-brand" exact to="/">
-                    Navbar
+                    Masterpiece
                 </NavLink>
                 <button
                     className="navbar-toggler"

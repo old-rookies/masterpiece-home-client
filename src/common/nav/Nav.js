@@ -2,12 +2,24 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 
-import "./Nav.scss";
+import './Nav.scss';
 
 // 공통 사용될 Nav 함수
 class Nav extends React.Component {
-    // override
-    // function render(){ /* CODE */ return(REACT+HTML); }
+    state = {
+        isOnTop : true
+    };
+    
+    componentDidMount(){
+        // component 로드 후 실행됨
+        document.addEventListener('scroll', () => {
+            const isOnTop = window.scrollY < 56;
+            if (isOnTop !== this.state.isOnTop) {
+                this.setState({ isOnTop });
+            }
+        });
+    }
+
     render() {
         // 자바스크립트 시작
         let navItems = [
@@ -18,7 +30,7 @@ class Nav extends React.Component {
         ];
         // 자바스크립트 끝
         return (
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className={ "navbar navbar-expand-lg fixed-top " + (this.state.isOnTop ? "navbar-light" : " navbar-dark bg-dark") }>
                 <NavLink className="navbar-brand" exact to="/">
                     Masterpiece
                 </NavLink>

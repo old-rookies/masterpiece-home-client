@@ -1,110 +1,42 @@
 import React from 'react';
-// import './timeline.scss'
-import './timeline_js.js'
+import Timelinedetail from './timeline_detail'
+import './timeline.scss'
 
 class Timeline extends React.Component{
     render(){
+
+        let timelinedetail = [
+            { title: "연혁1", text: "연혁 내용 입니다.", date: "2019.01.01", year:"2019" },
+            { title: "연혁2", text: "연혁 내용 입니다.", date: "2019.02.01", year:"2019" },
+            { title: "연혁3", text: "연혁 내용 입니다.", date: "2019.03.01", year:"2019" },
+            { title: "연혁4", text: "연혁 내용 입니다.", date: "2019.04.01", year:"2019" },
+        ];
+
         return (
-        <div class="team_sec bg_his">
-            <div class="cd-timeline js-cd-timeline">
-                <div class="container max-width-lg cd-timeline__container">
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--picture">
-                    <img src="assets/img/cd-icon-picture.svg" alt="Picture"/>
-                    </div>
+            <div class="timeline">
+                <ul>
+                {timelinedetail.map((value, index) => {
 
-                    <div class="cd-timeline__content text-component">
-                    <h2>Title of section 1</h2>
-                    <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                    if(index % 2 == 0){
+                        var aligninfo = "left"
+                    }
+                    else {
+                        var aligninfo = "right"
+                    }
 
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Jan 14</span>
-                        <a href="#0" class="btn btn--subtle">Read more</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--movie">
-                    <img src="assets/img/cd-icon-movie.svg" alt="Movie"/>
-                    </div>
-
-                    <div class="cd-timeline__content text-component">
-                    <h2>Title of section 2</h2>
-                    <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                    
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Jan 18</span>
-                        <a href="#0" class="btn btn--subtle">Read more</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--picture">
-                    <img src="assets/img/cd-icon-picture.svg" alt="Picture"/>
-                    </div>
-
-                    <div class="cd-timeline__content text-component">
-                    <h2>Title of section 3</h2>
-                    <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Jan 24</span>
-                        <a href="#0" class="btn btn--subtle">Read more</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--location">
-                    <img src="assets/img/cd-icon-location.svg" alt="Location"/>
-                    </div>
-
-                    <div class="cd-timeline__content text-component">
-                    <h2>Title of section 4</h2>
-                    <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Feb 14</span>
-                        <a href="#0" class="btn btn--subtle">Read more</a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--location">
-                    <img src="assets/img/cd-icon-location.svg" alt="Location"/>
-                    </div>
-
-                    <div class="cd-timeline__content text-component">
-                    <h2>Title of section 5</h2>
-                    <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Feb 18</span>
-                        <a href="#0" class="btn btn--subtle">Read more</a>
-                    </div>
-                    </div>
-                </div> 
-
-                <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--movie">
-                    <img src="assets/img/cd-icon-movie.svg" alt="Movie"/>
-                    </div>
-
-                    <div class="cd-timeline__content text-component">
-                    <h2>Final Section</h2>
-                    <p class="color-contrast-medium">This is the content of the last section</p>
-
-                    <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Feb 26</span>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+                return (
+                    <Timelinedetail
+                        key={index}
+                        align={aligninfo}
+                        title={value.title}
+                        text={value.text}
+                        date={value.date}
+                        year={value.year}
+                    />
+                    );
+                })}
+                </ul>
+          </div>
         );
     }
 }

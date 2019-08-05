@@ -14,7 +14,7 @@ class Timelinedetail extends React.Component{
         return (
                 <div>
                 {/* <p>{this.props.year}</p>    */}
-                <li class={this.props.align}>  
+                <li className={this.props.align}>  
                     <h1>{this.props.title}</h1>
                     <p>{this.props.text}</p>
                     <p>{this.props.date}</p>

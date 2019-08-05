@@ -11,11 +11,11 @@ class Member_info extends React.Component{
 
     render(){
         return (
-        <div class="member_info_box">
-            <img src={this.props.image_url} alt="profile_image" class="member_profile_img" />
+        <div className="member_info_box">
+            <img src={this.props.image_url} alt="profile_image" className="member_profile_img" />
             <ul>
                 <li>
-                    <sapn class="member_name">{this.props.name}</sapn><sapn>{this.props.position}</sapn>
+                    <sapn className="member_name">{this.props.name}</sapn><sapn>{this.props.position}</sapn>
                 </li>
                 <li>
                     {this.props.text}

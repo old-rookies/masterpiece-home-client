@@ -1,8 +1,8 @@
 import React from 'react';
-import './team_member.scss'
+import './member.scss'
 import Member_info from './member_info'
 
-class Team_member extends React.Component{
+class Member extends React.Component{
     render(){
         let memberinfo = [
             { image_url: "./bsh.jpg", name: "배성현", position: "개발자", text:"안녕하세요" },
@@ -12,7 +12,7 @@ class Team_member extends React.Component{
 
 
         return (
-        <div class="team_sec bg_mem">
+        <div className="section bg_mem">
             <h1>Memeber</h1>
             {memberinfo.map((value, index) => {
                 return (
@@ -31,4 +31,4 @@ class Team_member extends React.Component{
     }
 }
 
-export default Team_member;
+export default Member;

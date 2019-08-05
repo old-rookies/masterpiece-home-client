@@ -1,11 +1,11 @@
 import React from 'react';
-import './team_history.scss'
+import './history.scss'
 import Timeline from './timeline'
 
-class Team_history extends React.Component{
+class History extends React.Component{
     render(){
         return (
-        <div class="team_sec bg_his">
+        <div className="section bg_his">
             <h1>History</h1>
             <Timeline/>
             team introduction
@@ -14,4 +14,4 @@ class Team_history extends React.Component{
     }
 }
 
-export default Team_history;
+export default History;

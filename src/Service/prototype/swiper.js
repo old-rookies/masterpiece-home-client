@@ -48,8 +48,8 @@ class MySwiper extends React.Component{
               {prototype_img.map((value, index) => {
                   return (
                     <Slide className="swiper_slide_img" key={index}>
-                      Slide {index + 1}
-                      <image src={value.image_url} alt={value.image_alt}></image>
+                      (Slide {index + 1})
+                      <img src={value.image_url} alt={value.image_alt}/>
                     </Slide>
                   );
               })}

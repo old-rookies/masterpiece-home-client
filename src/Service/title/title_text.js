@@ -3,7 +3,7 @@ import React from 'react';
 class Title_text extends React.Component{
 
     static defaultProps = {
-        title: 'service_title'
+        title: 'Service_title'
     };
 
     render(){

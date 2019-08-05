@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import 'jquery/dist/jquery';
 import 'bootstrap/dist/css/bootstrap.css'
+// import 'swiper/dist/css/swiper.css'
+// import 'swiper/dist/js/swiper'
 // import 'bootstrap/dist/js/bootstrap.js'
 
 import App from './App';

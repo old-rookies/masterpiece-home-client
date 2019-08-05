@@ -7,7 +7,7 @@ class Title extends React.Component{
         return (
         <div className="section bg_tit">
             <Title_text/>
-            team_title, title_img
+            title_text, title_img
         </div>
         )
     }

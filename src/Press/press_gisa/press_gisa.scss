@@ -1,0 +1,30 @@
+.press_sec {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    padding: 10rem 0px;
+    margin: 0px;
+    text-align: center;
+}
+.press_gisa{
+    background-color: #cbf2d6;
+}
+.press_gisa_title{
+    h3{
+        margin-bottom:30px;
+    }
+}
+ul{
+    list-style: none;
+    li{ 
+        font-size: 18px;
+        a{
+            color: black;
+        }
+        a:hover{
+            text-decoration: none !important;
+            color: black;
+        }
+    }
+    
+}

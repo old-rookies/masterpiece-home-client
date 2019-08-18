@@ -14,10 +14,24 @@
         margin-bottom:30px;
     }
 }
-ul{
+.gisaList{
     list-style: none;
-    li{ 
-        font-size: 18px;
+    width:400px;
+    left: 0; right: 0; top:0;bottom:0;margin: auto;
+    border-top: solid lightgray 1px;
+    padding: 0;
+    .gisas{ 
+            border-bottom: solid lightgray 1px;
+        .pressnm{
+            font-size:10px;
+           }
+           .gisaDate{
+               color:lightgray;
+               font-size: 10px;
+           }
+           .gisaTitle{
+               font-size: 15px;
+           }
         a{
             color: black;
         }
@@ -28,3 +42,4 @@ ul{
     }
     
 }
+

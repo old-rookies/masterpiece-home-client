@@ -6,7 +6,7 @@ class NavItem extends React.Component {
         console.log(this.props);
         return (
             <li className="nav-item">
-                <NavLink className="nav-link " to={this.props.url} activeClassName="active">
+                <NavLink className="nav-link" to={this.props.url} activeClassName="active">
                     {this.props.text}
                 </NavLink>
             </li>

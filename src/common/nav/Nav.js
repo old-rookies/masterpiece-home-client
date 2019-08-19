@@ -2,13 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 
+import axios from 'axios';
+
 import './Nav.scss';
 
 // 공통 사용될 Nav 함수
 class Nav extends React.Component {
-    state = {
-        isOnTop : true
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOnTop : true,
+            navItems : []
+        };
+    }
     
     componentDidMount(){
         // component 로드 후 실행됨
@@ -18,16 +24,26 @@ class Nav extends React.Component {
                 this.setState({ isOnTop });
             }
         });
+
+        let uri = "http://ec2-3-17-161-174.us-east-2.compute.amazonaws.com:3000/api/corp/menu";
+        // let uri = 'http://localhost:3000/api/corp/menu';
+
+        axios.get(uri)
+        .then(result =>{
+            this.setState(prevState => ({
+                navItems : result.data.data.menu
+            }));
+            console.log(result);
+        })
+        .catch(err =>{
+            console.log('axios called fail');
+            console.log(err);
+        });
     }
 
     render() {
-        // 자바스크립트 시작
-        let navItems = [
-            { url: "service", text: "Service", active: true },
-            { url: "team", text: "Team", active: false },
-            { url: "press", text: "Press", active: false },
-            { url: "contact", text: "Contact", active: false }
-        ];
+
+
         // 자바스크립트 끝
         return (
             <nav className={ "navbar navbar-expand-lg fixed-top " + (this.state.isOnTop ? "navbar-light" : " navbar-dark bg-dark") }>
@@ -51,15 +67,15 @@ class Nav extends React.Component {
                     id="navbarSupportedContent"
                 >
                     <ul className="navbar-nav mr-auto">
-                        {navItems.map((value, index) => {
+                        {this.state.navItems.map((value, index) => {
                             return (
                                 <NavItem
                                 //  반복되는 요소를 구분짓기 위해서 기본으로 필요한 값
                                 //  여기서 index는 배열에서 value가 몇번째 요소인지 나타내는 값
                                     key={index}
-                                    url={value.url}
-                                    text={value.text}
-                                    active={value.active}
+                                    url={value.location}
+                                    text={value.displayNM}
+                                    // active={value.active}
                                 />
                             );
                         })}

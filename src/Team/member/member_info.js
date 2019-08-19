@@ -15,7 +15,7 @@ class Member_info extends React.Component{
             <img src={this.props.image_url} alt="profile_image" className="member_profile_img" />
             <ul>
                 <li>
-                    <sapn className="member_name">{this.props.name}</sapn><sapn>{this.props.position}</sapn>
+                    <span className="member_name">{this.props.name}</span><span>{this.props.position}</span>
                 </li>
                 <li>
                     {this.props.text}

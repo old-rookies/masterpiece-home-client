@@ -7,7 +7,7 @@ class About extends React.Component{
     render(){
         return (
         <div className="section bg_abt">
-            <h1>About Masterpiece</h1>
+            <h1 className="abt_title mb-5">"ABOUT MASTERPIECE"</h1>
             <div className="container">
                 <div className="row">
                     <About_left/>

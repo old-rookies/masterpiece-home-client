@@ -11,9 +11,9 @@ class Card extends React.Component{
     render(){
         return (
         <div className="col-md-4">
-            <div className="exp-card p-5">
-                <h1>{this.props.title}</h1>
-                <p>{this.props.content}</p>
+            <div className="exp-card p-5" id={this.props.num}>
+                {/* <h1>{this.props.title}</h1>
+                <p>{this.props.content}</p> */}
             </div>
         </div>
         );

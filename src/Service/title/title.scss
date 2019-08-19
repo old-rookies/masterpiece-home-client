@@ -1,6 +1,41 @@
 .bg_tit {
-    background-color: #F8CBAD;
+	// background-color: #F8CBAD;
+	background-image: url('../image/title/bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
-.title_box {
-    text-align: center;
+
+.logo2 {
+	background-image: url('../image/title/logo2.png');
+	background-size: cover;
+    background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+}
+
+.title_box, .comment_box {
+	color: white;
+	text-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.4);
+	page-break-after: auto;
+	text-align: left;
+	margin: 50px auto;
+	font-size: 1.2rem;
+	h1, h2, h3 {
+		text-align: left;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+}
+
+.phone_img {
+	background-image: url('../image/title/phone.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center;
+	background-position-y: center;
+	height: 120%;
+	min-height: 500px;
+	margin: auto;
 }

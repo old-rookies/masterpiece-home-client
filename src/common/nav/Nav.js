@@ -6,6 +6,8 @@ import axios from 'axios';
 
 import './Nav.scss';
 
+import logo from './image/logo.png';
+
 // 공통 사용될 Nav 함수
 class Nav extends React.Component {
     constructor(props) {
@@ -46,9 +48,9 @@ class Nav extends React.Component {
 
         // 자바스크립트 끝
         return (
-            <nav className={ "navbar navbar-expand-lg fixed-top " + (this.state.isOnTop ? "navbar-light" : " navbar-dark bg-dark") }>
+            <nav className={ "navbar navbar-expand-lg fixed-top " + (this.state.isOnTop ? "navbar-dark" : " navbar-dark bg-dark") }>
                 <NavLink className="navbar-brand" exact to="/">
-                    Masterpiece
+					<img src={logo} alt="Masterpiece" className="nav-logo"></img>
                 </NavLink>
                 <button
                     className="navbar-toggler"

@@ -20,7 +20,8 @@ class Explain extends React.Component{
                         <Card
                             key={index}
                             title={value.title}
-                            content={value.content}
+							content={value.content}
+							num={'img'+(index+1)}
                         />
                         );
                     })}

@@ -13,6 +13,7 @@ function App() {
     return (
         <Router>
             <Nav />
+            {/* <Route exact path="" component={Service} /> */}
             <Route exact path="/" component={Service} />
             <Route path="/service" component={Service} />
             <Route path="/team" component={Team} />

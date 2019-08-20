@@ -4,13 +4,54 @@
 	height: 500px;
 	margin: 20px 20px;
 	background-size: cover;
+	padding: 48px 30px!important;
+	h1 {
+		font-size: 1.6rem;
+	}
 }
 #img1 {
 	background-image: url('../image/explain/1.png');
+	display: flex;
+	align-items: flex-end;
+	.text-box {
+		width: 100%;
+		height: 135px;
+		text-shadow: 0 0.27375rem 0.1875rem rgba(0, 0, 0, 0.4);
+	}
+	h2 {
+		font-size: 1.1rem;
+		color: white;
+	}
+	p {
+		line-height: 165%;
+	}
 }
 #img2 {
 	background-image: url('../image/explain/2.png');
+	h1 {
+		margin-bottom: 230px;
+	}
+	h2{
+		line-height: 150%;
+		margin-bottom: 65px;
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 0.8rem;
+	}
 }
 #img3 {
 	background-image: url('../image/explain/3.png');
+	color: white;
+	h1 {
+		margin-bottom: 50px;
+	}
+	h2 {
+		font-size: 1.3rem;
+		line-height: 150%;
+		margin-bottom: 225px;
+	}
+	p {
+		font-size: 1rem;
+	}
 }
